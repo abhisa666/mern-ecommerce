@@ -11,7 +11,8 @@ const errorMiddleware = require('./middlewares/errors')
 
 // Setting up Config File
 if(process.env.NODE_ENV !== 'PRODUCTION'){
-    require('dotenv').dotenv.config({path:'./backend/config/config.env'})
+    const dotenv = require('dotenv')
+    dotenv.config({path:'./backend/config/config.env'})
  }
 
 // app.use(cors({credentials:true}))
